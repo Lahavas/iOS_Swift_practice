@@ -20,6 +20,35 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
     * Misplaced views
     * Adding more constraints
 
+#### 주요 개념
+
+View Hierarchy
+- Hierarchy of view objects with the **Window** (instance of UIWindow) at its root
+    1. Views render themselves (to its **Layer** (instance of CALayer))
+    2. Views are Composited together
+
+**Frame**
+- Instance of CGRect
+    1. Origin
+        - view's position (CGPoint: x and y)
+    2. Size
+        - view's size (CGSize: width and height)
+
+Point
+- relative unit of a measure
+
+Auto Layout System
+    - **alignment rectangle**
+    - Constraints
+        - how to find a view's *nearest neighbor*
+        - **Instrinsic content size**
+            - The size that a view wants to be
+
+#### 참고 자료
+
+> [View Programming 관련 자료] (https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009503-CH1-SW2)  
+> [Auto Layout 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)  
+
 ----------------------------------------------------------------------------
 
 ### Ch04 Text Input and Delegation

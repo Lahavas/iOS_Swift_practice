@@ -43,5 +43,4 @@ Connection
 #### 참고 자료
 
 > [XCode and Interface Builder 관련 자료](http://help.apple.com/xcode/mac/9.0/#/)  
-> [Auto Layout 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)  
 > [App Icons and Launch Screen 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW9)
