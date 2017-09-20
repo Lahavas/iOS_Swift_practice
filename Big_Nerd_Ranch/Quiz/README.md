@@ -32,11 +32,13 @@ GeoQuiz는 간단한 퀴즈 게임 프로젝트입니다.
 ##### 주요 개념
 
 Interface Builder
-: Graphic-style Object editor  
+- Graphic-style **Object editor**
+
 Auto Layout
-: works by specifying position and size constraints for each *view object*  
+- Calculating position and size constraints for each **View Object**  
+
 Connection
-: *Outlet* (a reference to an object) and *Action* (a method that gets triggered by *Target* object)  
+- **Outlet** (a reference to an object) and **Action** (a method that gets triggered by **Target** object)  
 
 ##### 참고 자료
 
