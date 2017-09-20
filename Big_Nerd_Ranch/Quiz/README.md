@@ -3,6 +3,8 @@
 
 GeoQuiz는 간단한 퀴즈 게임 프로젝트입니다.  
 
+----------------------------------
+
 ### Ch01 A Simple iOS Application
 
 * Creating an Xcode Project
