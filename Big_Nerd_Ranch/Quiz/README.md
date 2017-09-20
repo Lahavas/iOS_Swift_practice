@@ -3,9 +3,7 @@
 
 GeoQuiz는 간단한 퀴즈 게임 프로젝트입니다.  
 
-### 목차
-
-#### Ch01 A Simple iOS Application
+### Ch01 A Simple iOS Application
 
 * Creating an Xcode Project
 * Model-View-Controller
@@ -29,7 +27,7 @@ GeoQuiz는 간단한 퀴즈 게임 프로젝트입니다.
 * Application Icons
 * Launch Screen
 
-##### 주요 개념
+#### 주요 개념
 
 Interface Builder
 - Graphic-style **Object editor**
@@ -40,7 +38,7 @@ Auto Layout
 Connection
 - **Outlet** (a reference to an object) and **Action** (a method that gets triggered by **Target** object)  
 
-##### 참고 자료
+#### 참고 자료
 
 > [XCode and Interface Builder 관련 자료](http://help.apple.com/xcode/mac/9.0/#/)  
 > [Auto Layout 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)  
