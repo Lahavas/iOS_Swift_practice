@@ -29,6 +29,15 @@ GeoQuiz는 간단한 퀴즈 게임 프로젝트입니다.
 * Application Icons
 * Launch Screen
 
+##### 주요 개념
+
+Interface Builder
+: Graphic-style Object editor  
+Auto Layout
+: works by specifying position and size constraints for each *view object*  
+Connection
+: *Outlet* (a reference to an object) and *Action* (a method that gets triggered by *Target* object)  
+
 ##### 참고 자료
 
 > [XCode and Interface Builder 관련 자료](http://help.apple.com/xcode/mac/9.0/#/)  
