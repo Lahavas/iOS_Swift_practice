@@ -38,7 +38,7 @@ Point
 - relative unit of a measure
 
 Auto Layout System
-    - **alignment rectangle**
+- **alignment rectangle**
     - Constraints
         - how to find a view's *nearest neighbor*
         - **Instrinsic content size**
