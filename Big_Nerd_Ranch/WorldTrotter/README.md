@@ -70,12 +70,19 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
     * The keyboard's appearance is determined by **UITextInputTraits**
 * Formatter
     * number, date, energy, mass, length, measurements, and more
-* Delegation
+* **Delegation**
     * Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type.
     * Delegation is an object-oriented approach to *callbacks*
         * Callback is a function that is supplied in advance of an event and is called every time the event occurs
     * You supply a single *delegate* to receive all of the event-related callbacks for a particular object.
         * This delegate object can store, manipulate, act on, and relay the information from the callbacks as it sees fit.
+* UITextFieldDelegate protocol
+    * Two kinds of methods
+        * methods that handle information updates
+            * textFieldDidBeginEditing(_:), ...
+        * methods that handle requests for input
+            * textField(_:shouldChangeCharactersIn:replacementString:)
+                * The method returns a Bool, which is the delegates answer
 
 #### 참고 자료
 
