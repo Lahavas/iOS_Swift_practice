@@ -33,13 +33,13 @@ Quiz는 간단한 퀴즈 게임 프로젝트입니다.
 
 * Interface Builder
     * Graphic-style **Object editor**
-
+  
 * Auto Layout
-    * Calculating position and size constraints for each **View Object**  
-
+    * Calculating position and size constraints for each **View Object**
+  
 * Connection
-    * **Outlet** (a reference to an object) and **Action** (a method that gets triggered by **Target** object)  
-
+    * **Outlet** (a reference to an object) and **Action** (a method that gets triggered by **Target** object)
+  
 #### 참고 자료
 
 > [XCode and Interface Builder 관련 자료](http://help.apple.com/xcode/mac/9.0/#/)  
