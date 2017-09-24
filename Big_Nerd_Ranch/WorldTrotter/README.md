@@ -88,7 +88,7 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 
 > [UITextInputTraits 관련 자료](https://developer.apple.com/documentation/uikit/uitextinputtraits)  
 > [Measurement 관련 자료](https://developer.apple.com/documentation/foundation/measurement)  
-> Delegation 관련 자료: Cocoa Fundamentals Guide / The Swift Programming Language 참고
+> [Delegation 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html)
 
 ----------------------------------------------------------------------------
 
