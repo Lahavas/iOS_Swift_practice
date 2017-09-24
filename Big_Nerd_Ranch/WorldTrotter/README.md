@@ -64,6 +64,25 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
     * Using a delegate
     * More on protocols
 
+#### 주요 개념
+
+* Keyboard
+    * The keyboard's appearance is determined by **UITextInputTraits**
+* Formatter
+    * number, date, energy, mass, length, measurements, and more
+* Delegation
+    * Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type.
+    * Delegation is an object-oriented approach to *callbacks*
+        * Callback is a function that is supplied in advance of an event and is called every time the event occurs
+    * You supply a single *delegate* to receive all of the event-related callbacks for a particular object.
+        * This delegate object can store, manipulate, act on, and relay the information from the callbacks as it sees fit.
+
+#### 참고 자료
+
+> [UITextInputTraits 관련 자료](https://developer.apple.com/documentation/uikit/uitextinputtraits)  
+> [Measurement 관련 자료](https://developer.apple.com/documentation/foundation/measurement)  
+> Delegation 관련 자료: Cocoa Fundamentals Guide / The Swift Programming Language 참고
+
 ----------------------------------------------------------------------------
 
 ### Ch05 View Controllers

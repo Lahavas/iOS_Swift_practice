@@ -15,11 +15,35 @@ class ConversionViewController: UIViewController {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
+    var fahrenheitValue: Measurement<UnitTemperature>? {
+        didSet {
+            self.updateCelsiusLabel()
+        }
+    }
+    
+    var celsiusValue: Measurement<UnitTemperature>? {
+        
+        if let fahrenheitValue = fahrenheitValue {
+            return fahrenheitValue.converted(to: .celsius)
+        } else {
+            return nil
+        }
+    }
+    
+    let numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 1
+        return numberFormatter
+    }()
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.updateCelsiusLabel()
     }
     
     // MARK: - Memory Management
@@ -33,15 +57,49 @@ class ConversionViewController: UIViewController {
     
     @IBAction func fahrenheitFieldEditingChanged(_ sender: UITextField) {
         
-        if let text = sender.text, !text.isEmpty {
-            self.celsiusLabel.text = text
+        if let text = sender.text, let value = Double(text) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahrenheitValue = nil
+        }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    
+        self.textField.resignFirstResponder()
+    }
+    
+    // MARK: - Methods
+    
+    func updateCelsiusLabel() {
+        
+        if let celsiusValue = self.celsiusValue {
+            celsiusLabel.text = self.numberFormatter.string(from: NSNumber(value: celsiusValue.value))
         } else {
             self.celsiusLabel.text = "???"
         }
     }
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+}
+
+// MARK: -
+
+extension ConversionViewController: UITextFieldDelegate {
     
-        self.textField.resignFirstResponder()
+    // MARK: - Text Field Delegate
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        
+        if existingTextHasDecimalSeparator != nil,
+            replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
+            return true
+        }
     }
 }
 
