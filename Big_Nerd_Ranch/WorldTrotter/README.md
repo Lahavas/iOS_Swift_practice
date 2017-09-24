@@ -106,6 +106,35 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 * Interacting with View Controllers and Their Views
 * For the More Curious: Retina Display
 
+#### 주요 개념
+
+* **View Controller**
+    * Creating **view objects** that make up the **hierarchy**
+    * Handling **events** associated with the view objects in its hierarchy
+  
+* The View of a View Controller
+    * All view controllers inherit **View**
+        * **lazy loading**
+    * Two way of create view hierarchy
+        * Interface Builder
+        * loadView()
+  
+* How work with the root level **UIWindow** to add the initial view controller's view to the window hierarchy.
+    * UIWindow has a *rootViewController* property
+        * rootViewController's view gets added to the window's view hierarchy
+    * When this property is set
+        * Any existing subview's on the window are removed
+        * View controller's view gets add to the window with the appropriate Auto Layout constraints
+    * Each application has one *main interface*
+  
+*
+
+
+#### 참고 자료
+
+> [View Controller 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/)  
+> [MapKit framework 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/MapKit/MapKit.html)  
+
 ----------------------------------------------------------------------------
 
 ### Ch06 Programmatic Views
