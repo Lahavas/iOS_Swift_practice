@@ -127,7 +127,17 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
         * View controller's view gets add to the window with the appropriate Auto Layout constraints
     * Each application has one *main interface*
   
-*
+* UITabBarController
+    * Keeping an array of view controllers
+    * Maintaining a tab bar at the bottom of the screen with a tab for each view controller in its array
+    * UITabBarController's view is a UIView with two subviews
+        * The tab bar
+        * The view of the selected view controller
+    * **tabBarItem** property
+  
+* **Assets.xcassets**
+    * An *asset* is a set of files
+        * A single file will be selected at runtime based on the **user's device configuration**
 
 
 #### 참고 자료
