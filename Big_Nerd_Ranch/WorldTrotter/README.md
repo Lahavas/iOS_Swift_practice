@@ -185,6 +185,10 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 * Programmatic Controls
 * For the More Curious: NSAutoresizingMaskLayoutConstraint
 
+#### 주요 개념
+
+
+
 ----------------------------------------------------------------------------
 
 ### Ch07 Localization
