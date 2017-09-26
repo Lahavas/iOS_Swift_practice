@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var mapView: MKMapView!
+    
     // MARK: - View Life Cycle
+    
+    override func loadView() {
+        
+        mapView = MKMapView()
+        
+        view = mapView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
