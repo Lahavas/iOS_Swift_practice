@@ -138,12 +138,38 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 * **Assets.xcassets**
     * An *asset* is a set of files
         * A single file will be selected at runtime based on the **user's device configuration**
-
-
+  
+* The lifecycle of a view controller and its view
+    * **init(coder:)**
+        * The initializer for UIViewController instances created from a storyboard
+        * When a view controller instance is created from a storyboard, its **init(coder:)** gets called once
+    * **init(nibName:bundle:)**
+        * The designated initializer for UIViewController
+        * When a view controller instance is created without the use of a storyboard, its **init(nibName:bundle:)** gets called once
+    * **loadView()**
+        * To create a view controller's view programmatically
+    * **viewDidLoad()**
+        * To configure views created by loading an interface file
+        * This method gets called after the view of a view controller is created
+    * **viewWillAppear(_:)**
+        * To configure views created by loading an interface file
+        * This method and **viewDidAppear(_:)** get called every time your view controller is moved onscreen
+        * **viewWillDisappear(\_:)** and **viewDidDisappear(_:)** get called every time your view controller is moved offscreen
+  
+* Retina Display
+    * Vector Graphics
+    * In Core Graphics (also called Quartz), lines, curves, text, etc. are described in terms of **points**
+        * non-Retina display (1 point = 1x1 pixel)
+        * Retina display (1 point = 2x2 pixel)
+        * higher-resolution Retina display (1 point = 3x3 pixel)
+  
 #### 참고 자료
 
 > [View Controller 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/)  
 > [MapKit framework 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/MapKit/MapKit.html)  
+> [UITabBarController 관련 자료](https://developer.apple.com/documentation/uikit/uitabbarcontroller)  
+> [Assets 관련 자료](https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/)  
+> [UIViewController Lifecycle 관련 자료](https://developer.apple.com/documentation/uikit/uiviewcontroller)  
 
 ----------------------------------------------------------------------------
 
