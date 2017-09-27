@@ -282,4 +282,3 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 > [i18n and l10n 관련 자료](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html)  
 > [Bundle 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW12)  
 > [String Resources 관련 자료](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/LoadingResources/Strings/Strings.html)  
-> 
