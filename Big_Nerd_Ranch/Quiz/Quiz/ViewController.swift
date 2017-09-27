@@ -37,6 +37,12 @@ class ViewController: UIViewController {
         questionLabel.text = questions[currentQuestionIndex]
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.questionLabel.alpha = 0
+    }
+    
     // MARK: - Memory Management
 
     override func didReceiveMemoryWarning() {
@@ -57,12 +63,22 @@ class ViewController: UIViewController {
         questionLabel.text = question
         
         answerLabel.text = "???"
+        
+        self.animateLabelTransitions()
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
         
         let answer: String = answers[currentQuestionIndex]
         answerLabel.text = answer
+    }
+    
+    // MARK: - Methods
+    
+    func animateLabelTransitions() {
+        UIView.animate(withDuration: 0.5) { 
+            self.questionLabel.alpha = 1
+        }
     }
 }
 
