@@ -246,3 +246,40 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
     * NSLocalizedString and strings tables
 * For the More Curious: Bundle's Role in Internationalization
 * For the More Curious: Inporting and Exporting as XLIFF
+
+#### 주요 개념
+
+* **Internationalization** (i18n)
+    * Cultural information (language, currency, date format, number format, etc.)
+        * Formatter's **locale** property
+            * symbols, dates, and decimals and whether they use the metric system
+  
+* **Localization** (l10n)
+    * Language and Region Format settings
+    * How an iOS application handles localized resources
+        * **Main Bundle**
+            * When you build a target in Xcode, an *Application Bundle* is created
+                * All of the resources that you aded to the target in Xcode are copied into this bundle along with the executable itself.
+                * This bundle is represented at runtime by an instance of **Bundle**            
+        * language-specific directories (*lproj* directoriew)
+            * **Base Internationalization**
+                * Base.lproj
+        * To find appropriate lproj directories
+            * **url(forResource:withExtension:)**
+                * A path to a resource bundled with your application
+            * If bundle doesn't find appropriate lproj directories, it looks within the Base.lproj
+    * **Localizable.strings**
+        * Localizing individual interface files
+
+* **Strings table**
+    * A file containing a list of key-value pairs for all of the strings
+        * your application uses and their associated translations
+    * **NSLocalizedString(_:comment:)**
+        * generating strings tables with a cli application (*genstrings*)
+  
+#### 참고 자료
+
+> [i18n and l10n 관련 자료](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html)  
+> [Bundle 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW12)  
+> [String Resources 관련 자료](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/LoadingResources/Strings/Strings.html)  
+> 
