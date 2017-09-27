@@ -28,6 +28,10 @@ class MapViewController: UIViewController {
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         
+        segmentedControl.addTarget(self,
+                                   action: #selector(MapViewController.mapTypeChanged(_:)),
+                                   for: .valueChanged)
+        
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
         
@@ -53,5 +57,20 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Methods
+    
+    func mapTypeChanged(_ target: UISegmentedControl) {
+        switch target.selectedSegmentIndex {
+        case 0:
+            self.mapView.mapType = .standard
+        case 1:
+            self.mapView.mapType = .hybrid
+        case 2:
+            self.mapView.mapType = .satellite
+        default:
+            break
+        }
     }
 }
