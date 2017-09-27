@@ -198,12 +198,41 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
             * **NSLayoutConstraint**
             * create a constraint *between the two anchors*
   
-* 
-
+* Common Ancestor
+  
+* Layout Guides
+    * The extent to which the view controller's view contents will be visible
+    * topLayoutGuide
+        * Allowing your content to not underlay the *status bar* or *navigation bar* at the top of the screen
+    * bottomLayoutGuide
+        * Allowing your content to not underlay the *tab bar* at the bottom of the screen
+  
+* Margin
+    * **layoutMargins**
+        * UIView's property that denotes spacing to use when laying out content
+        * an instance of **UIEdgeInsets**
+    * **layoutMarginsGuide**
+        * exposing anchors that are tied to the edges of the layoutMargins
+        * Advantage of using the margins
+            * the margins can change depending on the device type as well as the size of the device
+  
+* **UIControl**
+    * Controls are responsible for Calling methods on their *target* in response to some *event*
+        * **UIControlEvents**
+  
+* Autoresizing Mask
+    * An autoresizing mask is constrained its relationship with its superview
+  
 #### 참고 자료
 
 > [View Controller 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/)  
-> 
+> [Auto Layout 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)  
+> [Anchor 관련 자료](https://developer.apple.com/documentation/uikit/nslayoutanchor)  
+> [Activating Constraints 관련 자료](https://developer.apple.com/documentation/appkit/nslayoutconstraint/1527000-active)  
+> [UILayoutGuide 관련 자료](https://developer.apple.com/documentation/uikit/uilayoutguide)  
+> [layoutMargins 관련 자료](https://developer.apple.com/documentation/uikit/uiview/1622566-layoutmargins)  
+> [NSLayoutConstraint 관련 자료](https://developer.apple.com/documentation/uikit/nslayoutconstraint)  
+> [UIControl 관련 자료](https://developer.apple.com/documentation/uikit/uicontrol)  
 
 ----------------------------------------------------------------------------
 
