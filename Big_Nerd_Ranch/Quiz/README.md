@@ -44,3 +44,25 @@ Quiz는 간단한 퀴즈 게임 프로젝트입니다.
 
 > [XCode and Interface Builder 관련 자료](http://help.apple.com/xcode/mac/9.0/#/)  
 > [App Icons and Launch Screen 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW9)
+
+----------------------------------------------------------------------------
+
+### Ch08 Controlling Animations
+
+* Basic Animations
+    * Closures
+* Another Label
+* Animation Completion
+* Animating Constraints
+* Timing Functions
+
+#### 주요 개념
+
+* 
+    * 
+  
+
+#### 참고 자료
+
+> [Animation 관련 자료](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/AnimatingViews/AnimatingViews.html)  
+> 
