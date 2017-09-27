@@ -187,7 +187,23 @@ WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다
 
 #### 주요 개념
 
+* loadView()
+    * When a view controller is created, its view property is nil
+    * If a view controller is asked for its view and its view is nil, then the **loadView()** method is called
+  
+* **Anchor**
+    * Anchors are properties on the view
+        * **NSLayoutAnchor**
+        * Anchors have a method **constraint(equalTo:)**
+            * **NSLayoutConstraint**
+            * create a constraint *between the two anchors*
+  
+* 
 
+#### 참고 자료
+
+> [View Controller 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/)  
+> 
 
 ----------------------------------------------------------------------------
 
