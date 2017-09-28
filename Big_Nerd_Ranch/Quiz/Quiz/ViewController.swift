@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet var nextQuestionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
+    @IBOutlet var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
+    @IBOutlet var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
+    
     let questions: [String] = [
         "What is 7+7?",
         "What is the capital of Vermont?",
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.currentQuestionLabel.text = self.questions[self.currentQuestionIndex]
+        
+        self.updateOffScreenLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,13 +83,32 @@ class ViewController: UIViewController {
     
     func animateLabelTransitions() {
         
+        self.view.layoutIfNeeded()
+        
+        let screenWidth = self.view.frame.width
+        self.nextQuestionLabelCenterXConstraint.constant = 0
+        self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+        
         UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             self.currentQuestionLabel.alpha = 0
             self.nextQuestionLabel.alpha = 1
+            
+            self.view.layoutIfNeeded()
         }, completion: { _ in
             swap(&self.currentQuestionLabel,
                  &self.nextQuestionLabel)
+            
+            swap(&self.currentQuestionLabelCenterXConstraint,
+                 &self.nextQuestionLabelCenterXConstraint)
+            
+            self.updateOffScreenLabel()
         })
+    }
+    
+    func updateOffScreenLabel() {
+        
+        let screenWidth = self.view.frame.width
+        self.nextQuestionLabelCenterXConstraint.constant = -screenWidth
     }
 }
 
