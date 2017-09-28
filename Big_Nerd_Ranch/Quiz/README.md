@@ -58,11 +58,18 @@ Quiz는 간단한 퀴즈 게임 프로젝트입니다.
 
 #### 주요 개념
 
-* 
-    * 
+* **animate(withDuration:delay:options:animations:completion:)**
+    * Animation Completion
+    * Timing Functions
+        * **UIViewAnimationOptions**
+        * default: ease-in/ease-out
+        * others: linear, curveLinear, etc.
   
-
+* **layoutIfNeeded()**
+    * This method will force the view to lay out its subview based on the *lastest constraints*
+  
 #### 참고 자료
 
+> [UIView 관련 자료](https://developer.apple.com/documentation/uikit/uiview)  
 > [Animation 관련 자료](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/AnimatingViews/AnimatingViews.html)  
-> 
+> [layoutIfNeeded 관련 자료](https://developer.apple.com/documentation/uikit/uiview/1622507-layoutifneeded)  
