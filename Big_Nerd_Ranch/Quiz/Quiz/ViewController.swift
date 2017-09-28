@@ -55,15 +55,15 @@ class ViewController: UIViewController {
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
         
-        currentQuestionIndex += 1
-        if currentQuestionIndex == questions.count {
-            currentQuestionIndex = 0
+        self.currentQuestionIndex += 1
+        if self.currentQuestionIndex == self.questions.count {
+            self.currentQuestionIndex = 0
         }
         
         let question: String = questions[currentQuestionIndex]
         self.nextQuestionLabel.text = question
         
-        answerLabel.text = "???"
+        self.answerLabel.text = "???"
         
         self.animateLabelTransitions()
     }
@@ -71,16 +71,20 @@ class ViewController: UIViewController {
     @IBAction func showAnswer(_ sender: UIButton) {
         
         let answer: String = answers[currentQuestionIndex]
-        answerLabel.text = answer
+        self.answerLabel.text = answer
     }
     
     // MARK: - Methods
     
     func animateLabelTransitions() {
-        UIView.animate(withDuration: 0.5) { 
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             self.currentQuestionLabel.alpha = 0
             self.nextQuestionLabel.alpha = 1
-        }
+        }, completion: { _ in
+            swap(&self.currentQuestionLabel,
+                 &self.nextQuestionLabel)
+        })
     }
 }
 
