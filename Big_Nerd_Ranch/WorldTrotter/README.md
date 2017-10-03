@@ -3,6 +3,16 @@
 
 WorldTrotter는 Localization이 적용된 온도 변환기 프로젝트입니다.  
 
+#### 도전 과제
+
+* [ ] More Auto Layout Practice
+* [ ] Disallow Alphabetic Characters
+* [ ] Dark Mode
+* [ ] Another Tab
+* [ ] User's Location
+* [ ] Dropping Pins
+* [ ] Another Localization
+
 ----------------------------------------------------------------------------
 
 ### Ch03 Views and the View Hierarchy
