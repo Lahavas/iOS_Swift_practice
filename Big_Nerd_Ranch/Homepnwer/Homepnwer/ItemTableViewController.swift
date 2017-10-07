@@ -11,6 +11,8 @@ import UIKit
 class ItemTableViewController: UITableViewController {
     
     // MARK: - Properties
+    
+    var itemStore: ItemStore!
 
     // MARK: - View Life Cycle
     
@@ -24,5 +26,23 @@ class ItemTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table View Data Source
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemStore.allItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        
+        let item = itemStore.allItems[indexPath.row]
+        
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        
+        return cell
     }
 }
