@@ -19,6 +19,12 @@ class ItemTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        
+        let insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0)
+        
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
     }
     
     // MARK: - Memory Management
