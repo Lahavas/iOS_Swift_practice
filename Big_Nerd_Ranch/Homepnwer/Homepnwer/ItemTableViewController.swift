@@ -23,8 +23,8 @@ class ItemTableViewController: UITableViewController {
         
         let insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0)
         
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+        self.tableView.contentInset = insets
+        self.tableView.scrollIndicatorInsets = insets
     }
     
     // MARK: - Memory Management
@@ -37,14 +37,14 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Table View Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        return self.itemStore.allItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
-        let item = itemStore.allItems[indexPath.row]
+        let item = self.itemStore.allItems[indexPath.row]
         
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$\(item.valueInDollars)"
@@ -56,18 +56,25 @@ class ItemTableViewController: UITableViewController {
     
     @IBAction func addNewItem(_ sender: UIButton) {
     
+        let newItem = self.itemStore.createItem()
+        
+        if let index = self.itemStore.allItems.index(of: newItem) {
+            let indexPath = IndexPath(row: index, section: 0)
+            
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+        }
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {
     
-        if isEditing {
+        if self.isEditing {
             
             sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
+            self.setEditing(false, animated: true)
         } else {
             
             sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
+            self.setEditing(true, animated: true)
         }
     }
 }
