@@ -8,6 +8,9 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Sections
 * [ ] Constant Rows
 * [ ] Customizing the Table
+* [ ] Renaming the Delete Button
+* [ ] Prevending Reordering
+* [ ] Really Preventing Reordering
 
 ----------------------------------------------------------------------------
 
@@ -82,12 +85,71 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
   
 #### 참고 자료
 
-> [UITableView 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html#//apple_ref/doc/uid/TP40007451)  
+> [UITableView 관련 자료](https://developer.apple.com/documentation/uikit/uitableview)  
+> [UITableView Guide 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html#//apple_ref/doc/uid/TP40007451)  
 > [UITableViewController 관련 자료](https://developer.apple.com/documentation/uikit/uitableviewdatasource)  
 > [arc4random 관련 자료](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/arc4random.3.html)  
 > [AppDelegate 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW2)  
 > [SOLID 원칙 관련 자료](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))  
 > [UITableViewCell 관련 자료](https://developer.apple.com/documentation/uikit/uitableviewcell)  
 > [contentInset 관련 자료](https://developer.apple.com/documentation/uikit/uiscrollview/1619406-contentinset)  
+
+----------------------------------------------------------------------------
+
+### Ch11 Editing UITableView
+
+* Editing Mode
+* Adding Rows
+* Deleting Rows
+* Moving Rows
+* Displaying User Alerts
+* Design Patterns
+
+#### 주요 개념
+
+* Header and Footer
+    * **UIView** instance
+    * Table Header / Section Header
+    * Table Footer / Section Footer
+  
+* **tableView(_:commit:forRowAt:)**
+    * **UITableViewCellEditingStyle**
+    * **IndexPath**
+  
+* **tableView(_:moveRowAt:to:)**
+
+* **UIAlertController**
+    * **UIAlertControllerStyle**
+        * .actionSheet
+            * To present the user with a list of actions
+        * .alert
+            * To display critical information
+    * **UIAlertAction**
+    * **modal view controller**
+        * Taking over the entire screen until it has finished its work
+        * **present(_:animated:completion:)**
+  
+* Design Patterns
+    * Delegation
+        * One object delegates certain responsibilities to another object
+    * Data Source
+        * A data source is responsible for providing data to another object when requested
+    * Model-View-Controller
+        * Model objects are the data
+        * Views display the UI
+        * Controllers provide the glue that ties the models and views together
+    * Target-action pairs
+        * One object calls a method on another object when a specific *event occurs*
+            * The *target* is the object that has a method called on it
+            * The *action* is the method being called
+  
+#### 참고 자료
+
+> [UITableView 관련 자료](https://developer.apple.com/documentation/uikit/uitableview)  
+> [UIAlertController 관련 자료](https://developer.apple.com/documentation/uikit/uialertcontroller)  
+> [Deletagion 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html)  
+> [Data source 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html#//apple_ref/doc/uid/TP40008195-CH14-SW3)  
+> [MVC 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html#//apple_ref/doc/uid/TP40008195-CH32-SW1)  
+> [Target-Action Pairs 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)  
 
 ----------------------------------------------------------------------------
