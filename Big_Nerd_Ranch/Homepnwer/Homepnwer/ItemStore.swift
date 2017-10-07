@@ -14,6 +14,14 @@ class ItemStore {
     
     var allItems: [Item] = [Item]()
     
+    // MARK: - Initialization
+    
+    init() {
+        for _ in 0..<5 {
+            createItem()
+        }
+    }
+    
     // MARK: - Methods
     
     @discardableResult func createItem() -> Item {
