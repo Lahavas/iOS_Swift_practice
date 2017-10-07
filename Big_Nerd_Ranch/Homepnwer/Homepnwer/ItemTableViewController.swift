@@ -63,6 +63,11 @@ class ItemTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        self.itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+    }
+    
     // MARK: - Actions
     
     @IBAction func addNewItem(_ sender: UIButton) {

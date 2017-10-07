@@ -30,4 +30,15 @@ class ItemStore {
             self.allItems.remove(at: index)
         }
     }
+    
+    func moveItem(from fromIndex: Int, to toIndex: Int) {
+        
+        if fromIndex == toIndex {
+            return
+        }
+        
+        let movedItem = self.allItems[fromIndex]
+        self.allItems.remove(at: fromIndex)
+        self.allItems.insert(movedItem, at: toIndex)
+    }
 }
