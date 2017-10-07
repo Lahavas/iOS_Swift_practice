@@ -20,10 +20,14 @@ class ItemStore {
         
         let newItem = Item(random: true)
         
-        allItems.append(newItem)
+        self.allItems.append(newItem)
         
         return newItem
     }
     
-    
+    func removeItem(_ item: Item) {
+        if let index = self.allItems.index(of: item) {
+            self.allItems.remove(at: index)
+        }
+    }
 }

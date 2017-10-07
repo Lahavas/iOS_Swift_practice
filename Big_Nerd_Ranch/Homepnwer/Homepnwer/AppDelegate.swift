@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let itemStore = ItemStore()
         
-        let itemTableViewController = window!.rootViewController as! ItemTableViewController
+        let itemTableViewController = self.window!.rootViewController as! ItemTableViewController
         itemTableViewController.itemStore = itemStore
         
         return true
