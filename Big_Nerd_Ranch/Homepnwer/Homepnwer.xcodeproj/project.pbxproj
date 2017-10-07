@@ -102,13 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				7A1841631F88A460001FAF56 /* AppDelegate.swift */,
+				7A1841931F88AABC001FAF56 /* Item.swift */,
+				7A1841951F88AE37001FAF56 /* ItemStore.swift */,
 				7A1841911F88AA38001FAF56 /* ItemTableViewController.swift */,
 				7A1841671F88A460001FAF56 /* Main.storyboard */,
 				7A18416A1F88A460001FAF56 /* Assets.xcassets */,
 				7A18416C1F88A460001FAF56 /* LaunchScreen.storyboard */,
 				7A18416F1F88A460001FAF56 /* Info.plist */,
-				7A1841931F88AABC001FAF56 /* Item.swift */,
-				7A1841951F88AE37001FAF56 /* ItemStore.swift */,
 			);
 			path = Homepnwer;
 			sourceTree = "<group>";
