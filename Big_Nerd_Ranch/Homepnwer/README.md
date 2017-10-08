@@ -12,6 +12,7 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Prevending Reordering
 * [ ] Really Preventing Reordering
 * [ ] Cell Colors
+* [ ] More Stack Views
 
 ----------------------------------------------------------------------------
 
@@ -184,5 +185,27 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [UITableViewCell 관련 자료](https://developer.apple.com/documentation/uikit/uitableviewcell)  
 > [Self-Sizing Table View Cell 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html)  
 > [Typography 관련 자료](https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/)  
+
+----------------------------------------------------------------------------
+
+### Ch13 Stack Views
+
+* Using UIStackView
+    * Implicit constraints
+    * Stack view distribution
+    * Nested stack views
+    * Stack view spacing
+* Segues
+* Hooking Up the Content
+* Passing Data Around
+
+#### 주요 개념
+
+* 
+    * 
+  
+#### 참고 자료
+
+> 
 
 ----------------------------------------------------------------------------
