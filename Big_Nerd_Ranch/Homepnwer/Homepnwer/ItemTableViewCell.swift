@@ -21,7 +21,10 @@ class ItemTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.nameLabel.adjustsFontForContentSizeCategory = true
+        self.serialNumberLabel.adjustsFontForContentSizeCategory = true
+        self.valueLabel.adjustsFontForContentSizeCategory = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
