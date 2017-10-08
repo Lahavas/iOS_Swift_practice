@@ -61,7 +61,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-gM-1Vd">
-                                            <rect key="frame" x="8" y="35.5" width="31" height="21"/>
+                                            <rect key="frame" x="8" y="37" width="31" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -74,12 +74,14 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QRp-gM-1Vd" firstAttribute="top" secondItem="qCK-sx-HKN" secondAttribute="bottom" constant="6.5" id="bsy-zH-w90"/>
+                                        <constraint firstItem="Ysb-ah-aMy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QRp-gM-1Vd" secondAttribute="trailing" constant="8" id="Mvn-k3-kxG"/>
+                                        <constraint firstItem="QRp-gM-1Vd" firstAttribute="top" secondItem="qCK-sx-HKN" secondAttribute="bottom" constant="8" id="bsy-zH-w90"/>
                                         <constraint firstItem="qCK-sx-HKN" firstAttribute="leading" secondItem="e2O-bv-pvK" secondAttribute="leadingMargin" id="cBy-wZ-Chc"/>
                                         <constraint firstAttribute="bottom" secondItem="QRp-gM-1Vd" secondAttribute="bottom" constant="8" id="dgg-RL-AcU"/>
                                         <constraint firstItem="qCK-sx-HKN" firstAttribute="top" secondItem="e2O-bv-pvK" secondAttribute="topMargin" id="gSp-CQ-3Ol"/>
                                         <constraint firstItem="QRp-gM-1Vd" firstAttribute="leading" secondItem="qCK-sx-HKN" secondAttribute="leading" id="gks-p9-pUV"/>
                                         <constraint firstItem="Ysb-ah-aMy" firstAttribute="trailing" secondItem="e2O-bv-pvK" secondAttribute="trailingMargin" id="iix-Tw-u22"/>
+                                        <constraint firstItem="Ysb-ah-aMy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qCK-sx-HKN" secondAttribute="trailing" constant="8" id="lYS-xw-HXC"/>
                                         <constraint firstItem="Ysb-ah-aMy" firstAttribute="centerY" secondItem="e2O-bv-pvK" secondAttribute="centerY" id="t3b-fe-Xjn"/>
                                     </constraints>
                                 </tableViewCellContentView>
