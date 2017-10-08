@@ -11,6 +11,7 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Renaming the Delete Button
 * [ ] Prevending Reordering
 * [ ] Really Preventing Reordering
+* [ ] Cell Colors
 
 ----------------------------------------------------------------------------
 
@@ -151,5 +152,37 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [Data source 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html#//apple_ref/doc/uid/TP40008195-CH14-SW3)  
 > [MVC 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html#//apple_ref/doc/uid/TP40008195-CH32-SW1)  
 > [Target-Action Pairs 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)  
+
+----------------------------------------------------------------------------
+
+### Ch12 Subclassing UITableViewCell
+
+* Creating ItemCell
+* Exposing the Properties of ItemCell
+* Using ItemCell
+* Dynamic Cell Heights
+* Dynamic Type
+    * Responding to user changes
+
+#### 주요 개념
+
+* **UITableViewCell**
+    * A **UITableView** displays a list of **UITableViewCell** objects
+    * Adding subviews to the *contentView*
+        * Because the cell will resize its *contentView* at certain times
+  
+* Dynamic Type system
+    * Providing specifically designed *text styles*
+    * Need to have the labels automatically adjust to content size changes
+        * **adjustsFontForContentSizeCategory**
+  
+* **awakeFromNib()**
+    * gets called on an object after it is loaded from an archive
+  
+#### 참고 자료
+
+> [UITableViewCell 관련 자료](https://developer.apple.com/documentation/uikit/uitableviewcell)  
+> [Self-Sizing Table View Cell 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html)  
+> [Typography 관련 자료](https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/)  
 
 ----------------------------------------------------------------------------
