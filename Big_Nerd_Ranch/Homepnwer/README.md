@@ -268,11 +268,45 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 
 #### 주요 개념
 
-* 
-    * 
+* Navigation Controller
+    * a *drill-down interface*
+    * **UINavigationController**
+        * To maintain an array of view controllers presenting related information in a *stack*
+        * *The root view controller*
+            * on the bottom of the stack
+            * does not have a *rootViewController* property
+        * *topViewController* property
+        * UINavigationController's *view*
+            * subviews
+                * **UINavigationBar**
+                * the *view* of *topViewController*
+  
+* Event Handling
+    * *first responder* status
+        * **UIResponder** class
+        * the *responder chain*
+    * To dismiss the keyboard
+        * **resignFirstResponder()**
+        * **endEditing(_:)**
+  
+* **UINavigationBar**
+    * Every UIViewController has a *navigationItem* property of type **UINavigationItem**
+        **UINavigationItem**
+            * UINavigationItem is **not** a subclass of UIView
+            * *titleView*
+            * **UIBarButtonItem**
+                * To contain the information for a button
+                    * only be displayed on a **UINavigationBar** or a **UIToolBar**
+                * *leftBarButtonItem*
+                * *rightBarButtonItem*
   
 #### 참고 자료
 
-> 
+> [Navigation Controller 관련 자료](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html)  
+> [UINavigationController 관련 자료](https://developer.apple.com/documentation/uikit/uinavigationcontroller)  
+> [UIViewController Lifecycle 관련 자료](https://developer.apple.com/documentation/uikit/uiviewcontroller)  
+> [Event Handling 관련 자료](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/EventOverview/Introduction/Introduction.html#//apple_ref/doc/uid/10000060i-CH1-SW1)  
+> [UINavigationBar 관련 자료](https://developer.apple.com/documentation/uikit/uinavigationbar)  
+> [UINavigationItem 관련 자료](https://developer.apple.com/documentation/uikit/uinavigationitem)  
 
 ----------------------------------------------------------------------------
