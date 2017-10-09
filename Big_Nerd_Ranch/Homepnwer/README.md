@@ -13,6 +13,9 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Really Preventing Reordering
 * [ ] Cell Colors
 * [ ] More Stack Views
+* [ ] Displaying a Number Pad
+* [ ] A Custom UITextField
+* [ ] Pushing More View Controllers
 
 ----------------------------------------------------------------------------
 
@@ -248,5 +251,28 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [Instrinsic Content Size 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html)  
 > [Segue Practice 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)  
 > [Prepare 관련 자료](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare)  
+
+----------------------------------------------------------------------------
+
+### Ch14 UINavigationController
+
+* UINavigationController
+* Navigating with UINavigationController
+* Appearing and Disappearing Views
+* Dismissing the Keyboard
+    * Event handling basics
+    * Dismissing by pressing the Return key
+    * Dismissing by tapping elsewhere
+* UINavigationBar
+    * Adding buttons to the navigation bar
+
+#### 주요 개념
+
+* 
+    * 
+  
+#### 참고 자료
+
+> 
 
 ----------------------------------------------------------------------------
