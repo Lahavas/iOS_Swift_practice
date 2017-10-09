@@ -30,6 +30,12 @@ class ItemTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 65
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Memory Management
 
     override func didReceiveMemoryWarning() {

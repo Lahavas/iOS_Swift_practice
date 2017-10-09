@@ -53,6 +53,20 @@ class ItemDetailViewController: UIViewController {
             self.dateFormatter.string(from: self.item.dateCreated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.item.name = self.nameField.text ?? ""
+        self.item.serialNumber = self.serialNumberField.text
+        
+        if let valueText = self.valueField.text,
+            let value = self.numberFormatter.number(from: valueText) {
+            self.item.valueInDollars = value.intValue
+        } else {
+            self.item.valueInDollars = 0
+        }
+    }
+    
     // MARK: - Memory Management
 
     override func didReceiveMemoryWarning() {
