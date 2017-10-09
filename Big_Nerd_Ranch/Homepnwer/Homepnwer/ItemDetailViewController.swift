@@ -56,6 +56,8 @@ class ItemDetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        self.view.endEditing(true)
+        
         self.item.name = self.nameField.text ?? ""
         self.item.serialNumber = self.serialNumberField.text
         
@@ -74,4 +76,23 @@ class ItemDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Actions
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        
+        self.view.endEditing(true)
+    }
+}
+
+// MARK: -
+
+extension ItemDetailViewController: UITextFieldDelegate {
+    
+    // MARK: - Text Field Delegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
 }
