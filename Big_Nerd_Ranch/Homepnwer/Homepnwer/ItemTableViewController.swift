@@ -89,6 +89,22 @@ class ItemTableViewController: UITableViewController {
         self.itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier ?? "" {
+        case "ShowItem":
+            if let row = self.tableView.indexPathForSelectedRow?.row {
+                let item = self.itemStore.allItems[row]
+                let detailViewController = segue.destination as! ItemDetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func addNewItem(_ sender: UIButton) {

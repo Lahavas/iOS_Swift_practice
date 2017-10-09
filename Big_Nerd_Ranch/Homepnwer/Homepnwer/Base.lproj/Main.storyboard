@@ -90,6 +90,7 @@
                                     <outlet property="nameLabel" destination="qCK-sx-HKN" id="P0p-kV-UWg"/>
                                     <outlet property="serialNumberLabel" destination="QRp-gM-1Vd" id="5BB-fX-6OR"/>
                                     <outlet property="valueLabel" destination="Ysb-ah-aMy" id="56U-RG-og5"/>
+                                    <segue destination="CDm-UW-RQV" kind="show" identifier="ShowItem" id="Iyc-p0-y1v"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="-185" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Detail View Controller-->
         <scene sceneID="yCO-zT-wCT">
             <objects>
-                <viewController id="CDm-UW-RQV" sceneMemberID="viewController">
+                <viewController id="CDm-UW-RQV" customClass="ItemDetailViewController" customModule="Homepnwer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhy-FM-isX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +188,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vI1-Ba-1TD"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="PXH-Sk-X9a" id="jRq-G0-9gM"/>
+                        <outlet property="nameField" destination="Po7-EL-ve4" id="6Mh-Ja-kzW"/>
+                        <outlet property="serialNumberField" destination="6BK-Hd-3Zo" id="q10-Ey-bK4"/>
+                        <outlet property="valueField" destination="79m-Bo-mnN" id="S3X-mh-Rks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcz-F1-cr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="856"/>
+            <point key="canvasLocation" x="655" y="134"/>
         </scene>
     </scenes>
 </document>
