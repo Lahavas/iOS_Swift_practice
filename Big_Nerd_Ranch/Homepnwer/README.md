@@ -291,7 +291,7 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
   
 * **UINavigationBar**
     * Every UIViewController has a *navigationItem* property of type **UINavigationItem**
-        **UINavigationItem**
+        * **UINavigationItem**
             * UINavigationItem is **not** a subclass of UIView
             * *titleView*
             * **UIBarButtonItem**
