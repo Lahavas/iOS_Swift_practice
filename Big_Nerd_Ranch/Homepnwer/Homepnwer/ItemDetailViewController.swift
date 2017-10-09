@@ -17,7 +17,11 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
-    var item: Item!
+    var item: Item! {
+        didSet {
+            self.navigationItem.title = self.item.name
+        }
+    }
     
     let numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()

@@ -13,18 +13,19 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Properties
     
     var itemStore: ItemStore!
+    
+    // MARK: - Initialization
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.navigationItem.leftBarButtonItem = editButtonItem
+    }
 
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0)
-        
-        self.tableView.contentInset = insets
-        self.tableView.scrollIndicatorInsets = insets
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 65
@@ -113,7 +114,7 @@ class ItemTableViewController: UITableViewController {
     
     // MARK: - Actions
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
     
         let newItem = self.itemStore.createItem()
         
@@ -121,19 +122,6 @@ class ItemTableViewController: UITableViewController {
             let indexPath = IndexPath(row: index, section: 0)
             
             self.tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-    
-        if self.isEditing {
-            
-            sender.setTitle("Edit", for: .normal)
-            self.setEditing(false, animated: true)
-        } else {
-            
-            sender.setTitle("Done", for: .normal)
-            self.setEditing(true, animated: true)
         }
     }
 }
