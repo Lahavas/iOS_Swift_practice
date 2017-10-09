@@ -201,11 +201,52 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 
 #### 주요 개념
 
-* 
-    * 
+* *stack view*
+    * An instance of **UIStackView**
+        * To create a *vertical* or *horizontal* layout
+            * To lay out and manages most of the constraints
+    * the **Distribution** property
+        * Fill
+            * leys the views lay out their content based on their *intrinsic content size*
+        * Fill Equally
+            * resize the labels so that they *all have the same height*, ignoring the intrinsic content size
+    * programmatically
+        * **addArrangedSubview(_:)**
+        * **insertArrangedSubview(_:at:)**
+        * **removeArrangedSubview(_:)**
+  
+* *intrinsic content size*
+    * *content hugging priority*
+        * Make the view *not want to be bigger*
+    * *content compression resistance priority*
+        * How much a view *resists getting smaller*
+  
+* **Segue**
+    * an instance of **UIStoryboardSegue**
+        * To move another view controller's view onto the screen
+    * *style*
+        * How the view controller will be presented
+    * *action item*
+        * The view object in the storyboard file that *triggers the segue*
+        * **UIControl**
+    * *identifier*
+        * To programmatically access the segue
+  
+* **prepare(for:sender:)**
+    * **UIStoryboardSegue**
+        * To give you information about which segue is happening
+            * *The source view controller*
+            * *The destination view controller*
+            * *The identifier of the segue*
+    * *sender*
+        * The object that triggered the segue
   
 #### 참고 자료
 
-> 
+> [UIStackView 관련 자료](https://developer.apple.com/documentation/uikit/uistackview)  
+> [UIStackView Practice 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html)  
+> [Instrinsic Content Size 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html)  
+> [Segue Practice 관련 자료](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)  
+> [Prepare 관련 자료](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare)  
 
 ----------------------------------------------------------------------------
