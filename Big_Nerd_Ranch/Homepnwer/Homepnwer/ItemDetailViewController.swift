@@ -123,4 +123,13 @@ extension ItemDetailViewController: UINavigationControllerDelegate, UIImagePicke
     
     // MARK: - Image Picker Delegate
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        self.imageView.image = image
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
