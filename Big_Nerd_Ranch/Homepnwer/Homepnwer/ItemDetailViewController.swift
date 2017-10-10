@@ -90,6 +90,17 @@ class ItemDetailViewController: UIViewController {
     
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
     
+        let imagePickerController = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePickerController.sourceType = .camera
+        } else {
+            imagePickerController.sourceType = .photoLibrary
+        }
+        
+        imagePickerController.delegate = self
+        
+        present(imagePickerController, animated: true, completion: nil)
     }
 }
 
@@ -104,4 +115,12 @@ extension ItemDetailViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+// MARK: -
+
+extension ItemDetailViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    // MARK: - Image Picker Delegate
+    
 }
