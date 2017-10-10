@@ -16,6 +16,9 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Displaying a Number Pad
 * [ ] A Custom UITextField
 * [ ] Pushing More View Controllers
+* [ ] Editing an Image
+* [ ] Removing an Image
+* [ ] Camera Overlay
 
 ----------------------------------------------------------------------------
 
@@ -308,5 +311,63 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [Event Handling 관련 자료](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/EventOverview/Introduction/Introduction.html#//apple_ref/doc/uid/10000060i-CH1-SW1)  
 > [UINavigationBar 관련 자료](https://developer.apple.com/documentation/uikit/uinavigationbar)  
 > [UINavigationItem 관련 자료](https://developer.apple.com/documentation/uikit/uinavigationitem)  
+
+----------------------------------------------------------------------------
+
+### Ch15 Camera
+
+* Displaying Images and UIImageView
+    * Adding a camera button
+* Taking Pictures and UIImagePickerController
+    * Setting the image picker's sourceType
+    * Setting the image picker's delegate
+    * Presenting the image picker modally
+    * Permissions
+    * Saving the image
+* Creating ImageStore
+* Giving View Controllers Access to the Image Store
+* Creating and Using Keys
+* Wrapping Up ImageStore
+* For the More Curious: Navigation Implementation Files
+    * // MARK:
+
+#### 주요 개념
+
+* **UIImagePickerController**
+    * The user can take and save a picture of each item
+    * Image picker's *sourceType*
+        * *UIImagePickerControllerSourceType.camera*
+            * To take a new photo
+        * *UIImagePickerControllerSourceType.photoLibrary*
+            * To select an album and then a photo from that album
+        * *UIImagePickerControllerSourceType.savedPhotosAlbum*
+            * To choose from the most recently taken photos
+    * Image picker's *delegate*
+        * **UIImagePickerController**'s *delegate* property is inherited from its superclass, **UINavigationController**
+
+  
+* **UIImageView**
+    * *contentMode* property
+        * To determine where to position and how to resize the content within the image view's frame
+        * *UIViewContentMode.scaleToFill*
+            * Default value
+            * To adjust the image to exactly match the bounds of the image view
+  
+* Cache
+    * The cache *automatically remove objects* if the system gets low on memory
+  
+* **NSUUID**
+    * To represent a UUID
+    * Generated using *the time*, *a counter*, and *a hardware identifier* (MAC address of the Wi-Fi card)
+  
+#### 참고 자료
+
+> [UIImagePickerController 관련 자료](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)  
+> [UIImageView 관련 자료](https://developer.apple.com/documentation/uikit/uiimageview)  
+> [UIToolBar 관련 자료](https://developer.apple.com/documentation/uikit/uitoolbar)  
+> [info.plist 관련 자료](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1)  
+> [NSCache 관련 자료](https://developer.apple.com/documentation/foundation/nscache)  
+> [NSUUID 관련 자료](https://developer.apple.com/documentation/foundation/nsuuid)  
+> [XCode MARKUP 관련 자료](https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497)  
 
 ----------------------------------------------------------------------------
