@@ -16,6 +16,7 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     var item: Item! {
         didSet {
@@ -85,6 +86,10 @@ class ItemDetailViewController: UIViewController {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         
         self.view.endEditing(true)
+    }
+    
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+    
     }
 }
 
