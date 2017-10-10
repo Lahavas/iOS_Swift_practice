@@ -174,9 +174,9 @@
                                     <constraint firstAttribute="height" constant="44" id="tAg-3x-oyh"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="ig6-kU-cfT">
+                                    <barButtonItem systemItem="camera" id="gy4-gV-D5A">
                                         <connections>
-                                            <action selector="takePicture:" destination="CDm-UW-RQV" id="owm-XF-cwf"/>
+                                            <action selector="takePicture:" destination="CDm-UW-RQV" id="Ohc-Fb-gaR"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
