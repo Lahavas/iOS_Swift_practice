@@ -13,6 +13,7 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Properties
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     // MARK: - Initialization
     
@@ -81,6 +82,7 @@ class ItemTableViewController: UITableViewController {
                 (action) -> Void in
                 
                 self.itemStore.removeItem(item)
+                self.imageStore.deleteImage(forKey: item.itemKey)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })
             
@@ -106,6 +108,7 @@ class ItemTableViewController: UITableViewController {
                 let item = self.itemStore.allItems[row]
                 let detailViewController = segue.destination as! ItemDetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier.")

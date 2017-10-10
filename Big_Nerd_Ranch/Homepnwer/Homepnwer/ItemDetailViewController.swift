@@ -24,6 +24,8 @@ class ItemDetailViewController: UIViewController {
         }
     }
     
+    var imageStore: ImageStore!
+    
     let numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -56,6 +58,11 @@ class ItemDetailViewController: UIViewController {
             self.numberFormatter.string(from: NSNumber(value: self.item.valueInDollars))
         self.dateLabel.text =
             self.dateFormatter.string(from: self.item.dateCreated)
+        
+        let key = self.item.itemKey
+        
+        let imageToDisplay = self.imageStore.image(forKey: key)
+        self.imageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -126,6 +133,8 @@ extension ItemDetailViewController: UINavigationControllerDelegate, UIImagePicke
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        self.imageStore.setImage(image, forKey: self.item.itemKey)
         
         self.imageView.image = image
         

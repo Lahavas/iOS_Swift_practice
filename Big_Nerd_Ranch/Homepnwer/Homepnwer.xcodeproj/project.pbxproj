@@ -17,6 +17,7 @@
 		7A1841941F88AABC001FAF56 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1841931F88AABC001FAF56 /* Item.swift */; };
 		7A1841961F88AE37001FAF56 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1841951F88AE37001FAF56 /* ItemStore.swift */; };
 		7A1C65F11F8B315C0008666C /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C65F01F8B315C0008666C /* ItemDetailViewController.swift */; };
+		7ABB28341F8D12BC006B2236 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB28331F8D12BC006B2236 /* ImageStore.swift */; };
 		7AC0FECF1F89D869004AF891 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC0FECE1F89D869004AF891 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		7A1841931F88AABC001FAF56 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7A1841951F88AE37001FAF56 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		7A1C65F01F8B315C0008666C /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		7ABB28331F8D12BC006B2236 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		7AC0FECE1F89D869004AF891 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				7A1841631F88A460001FAF56 /* AppDelegate.swift */,
 				7A1841931F88AABC001FAF56 /* Item.swift */,
 				7A1841951F88AE37001FAF56 /* ItemStore.swift */,
+				7ABB28331F8D12BC006B2236 /* ImageStore.swift */,
 				7A1C65F01F8B315C0008666C /* ItemDetailViewController.swift */,
 				7A1841911F88AA38001FAF56 /* ItemTableViewController.swift */,
 				7AC0FECE1F89D869004AF891 /* ItemTableViewCell.swift */,
@@ -276,6 +279,7 @@
 				7A1C65F11F8B315C0008666C /* ItemDetailViewController.swift in Sources */,
 				7AC0FECF1F89D869004AF891 /* ItemTableViewCell.swift in Sources */,
 				7A1841961F88AE37001FAF56 /* ItemStore.swift in Sources */,
+				7ABB28341F8D12BC006B2236 /* ImageStore.swift in Sources */,
 				7A1841641F88A460001FAF56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
