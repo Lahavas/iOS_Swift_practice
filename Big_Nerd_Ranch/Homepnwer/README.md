@@ -19,6 +19,7 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Editing an Image
 * [ ] Removing an Image
 * [ ] Camera Overlay
+* [ ] PNG
 
 ----------------------------------------------------------------------------
 
@@ -369,5 +370,82 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [NSCache 관련 자료](https://developer.apple.com/documentation/foundation/nscache)  
 > [NSUUID 관련 자료](https://developer.apple.com/documentation/foundation/nsuuid)  
 > [XCode MARKUP 관련 자료](https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497)  
+
+----------------------------------------------------------------------------
+
+### Ch16 Saving, Loading, and Application States
+
+* Archiving
+* Application Sandbox
+    * Constructing a file URL
+* NSKeyedArchiver and NSKeyed Unarchiver
+    * Loading files
+* Application States and Transitions
+* Writing to the Filesystem with Data
+* Error Handling
+* For the More Curious: Application State Transitions
+* For the More Curious: Reading and Writing to the Filesystem
+* For the More Curious: The Application Bundle
+
+#### 주요 개념
+
+* **Archiving**
+    * One of the most common ways of *persisting model objects*
+    * Recording all of its properties and saving them to the *filesystem*
+    * *Unarchibing*
+        * re-creates the object from that data
+    * **NSCoding** protocol
+        * UIView and UIViewController both conform to the NSCoding Protocol
+        * **encode(with:)**
+            * **NSCoder** object
+                * To write out a stream of data
+                    * That stream will be organized as *key-value pairs* and stored on the filesystem
+            * Encoding is a recursive process
+                * **encode(_:forKey:)**
+        * **init(coder:)**
+            * To grab all of the objects that were encoded in **encode(with:)**
+            * To assign them to the appropriate property
+    * **NSKeyArchiver** class
+        * **archiveRootObject(_:toFile:)** method
+            * The method begins by creating an instance of **NSKeyArchiver**
+            * The method **encode(with:)** is called and is passed the instance of **NSKeyArchiver** as an argument
+            * Called **encode(with:)** to all of the objects it contains, passing the same **NSKeyedArchiver**
+            * The **NSKeyArchiver** writes the data it collected to the *path*
+    * **NSKeyUnarchiver** class
+        * **unarchiveObject(withFile:)** method
+            * To create an instance of **NSKeyedUnarchiver**
+            * To load the archive located at the url into that instance
+  
+* **Application Sandbox**
+    * A directory on the filesystem
+        * Be barricaded from the rest of the filesystem
+        * *Documents/*
+            * To write data that the application generates during runtime
+            * To persist between runs of the application
+            * Get backed up in iTunes or iCloud
+        * *Library/Caches*
+            * To write data that the application generates during runtime
+            * To persist between runs of the application
+            * *Not* get backed up in iTunes or iCloud
+        * *Library/Preferences/*
+            * Get handled automatically by the class **NSUserDefaults**
+            * Get backed up in iTunes or iCloud
+        * *tmp/*
+            * To write data that you will use temporarily during an application's runtime
+            * *Not* get backed up in iTunes or iCloud
+    * To handle writing to and reading from filesystem
+        * Need to construct a **URL** to this file
+            * **urls(for:in:)**
+                * To search the filesystem for a URL that meets the criteria given by the arguments
+  
+* Application States and Transitions
+  
+#### 참고 자료
+
+> [Archiving 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Archiving.html)  
+> [Archiving Practice 관련 자료](https://developer.apple.com/documentation/foundation/archives_and_serialization)  
+> [Application Sandbox 관련 자료](https://developer.apple.com/app-sandboxing/)  
+> [NSURL 관련 자료](https://developer.apple.com/documentation/foundation/nsurl)  
+> 
 
 ----------------------------------------------------------------------------
