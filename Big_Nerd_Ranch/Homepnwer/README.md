@@ -437,15 +437,20 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
         * Need to construct a **URL** to this file
             * **urls(for:in:)**
                 * To search the filesystem for a URL that meets the criteria given by the arguments
+    * *Application Bundle*
+        * To contain the application executable and any resources you have bundled with your application
+        * Files within the application bundle are *read-only*
   
 * Application States and Transitions
   
 #### 참고 자료
 
 > [Archiving 관련 자료](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Archiving.html)  
-> [Archiving Practice 관련 자료](https://developer.apple.com/documentation/foundation/archives_and_serialization)  
+> [Archives and Serialization Practice 관련 자료](https://developer.apple.com/documentation/foundation/archives_and_serialization)  
 > [Application Sandbox 관련 자료](https://developer.apple.com/app-sandboxing/)  
 > [NSURL 관련 자료](https://developer.apple.com/documentation/foundation/nsurl)  
-> 
+> [App State Transitions 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html#//apple_ref/doc/uid/TP40007072-CH8-SW1)  
+> [NSData 관련 자료](https://developer.apple.com/documentation/foundation/nsdata)  
+> [Bundle 관련 자료](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i-CH1-SW1)  
 
 ----------------------------------------------------------------------------
