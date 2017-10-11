@@ -20,6 +20,7 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 * [ ] Removing an Image
 * [ ] Camera Overlay
 * [ ] PNG
+* [ ] Stacked Text Field and Labels
 
 ----------------------------------------------------------------------------
 
@@ -452,5 +453,33 @@ Homepnwer는 물품 보관을 위한 프로젝트입니다.
 > [App State Transitions 관련 자료](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html#//apple_ref/doc/uid/TP40007072-CH8-SW1)  
 > [NSData 관련 자료](https://developer.apple.com/documentation/foundation/nsdata)  
 > [Bundle 관련 자료](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i-CH1-SW1)  
+
+----------------------------------------------------------------------------
+
+### Ch17 Size Classes
+
+* Modifying Traits for a Specific Size Class
+
+#### 주요 개념
+
+* **Size Class**
+    * To represent a relative amount of screen space in a given dimension
+        * Compact Width | Compact Height (wC hC)
+            * iPhone (3.5, 4, 4.7-inch) in landscape orientation
+        * Compact Width | Regular Height (wC hR)
+            * iPhone (all size) in portrait orientation
+        * Regular Width | Compact Height (wR hC)
+            * iPhone (5.5-inch) in landscape orientation
+        * Regular Width | Regular Height (wR hR)
+            * iPad (all size) in all orientations
+    * Be able to change
+        * *Properties* for many views
+        * Whether a specific *subview and constraint* is installed
+        * The constant of a constraint
+        * The font for subviews that display text
+  
+#### 참고 자료
+
+> [Size Class 관련 자료](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/Size-ClassSpecificLayout.html)  
 
 ----------------------------------------------------------------------------
